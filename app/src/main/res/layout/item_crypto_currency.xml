@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="5dp"
+    app:cardElevation="1sp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/textView_symbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_centerVertical="true"
+            tools:text="BTC"/>
+
+        <View
+            android:id="@+id/view_vertical_line"
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@+id/textView_symbol"
+            android:layout_toRightOf="@+id/textView_symbol"
+            android:background="@android:color/black"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:id="@+id/textView_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:layout_toEndOf="@id/view_vertical_line"
+            android:layout_toRightOf="@id/view_vertical_line"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/linearLayout_prices"
+            android:layout_toStartOf="@+id/linearLayout_prices"
+            tools:text="Bitcoin"/>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_prices"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_margin="5dp"
+                android:textColor="@android:color/black"
+                tools:text="5000.00$"/>
+
+            <TextView
+                android:id="@+id/textView_24h"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/green"
+                tools:text="24h: 0.25%"/>
+
+            <TextView
+                android:id="@+id/textView_7d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/green"
+                tools:text="7d: -0.25%"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

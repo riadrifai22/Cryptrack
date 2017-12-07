@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Cryptrack</string>
+    <string name="search">Search</string>
+    <string name="filter">Filter</string>
 </resources>

@@ -8,9 +8,9 @@
         app:actionViewClass="android.support.v7.widget.SearchView"
         app:showAsAction="always|collapseActionView"/>
 
-    <!--<item
+    <item
         android:id="@+id/item_filter"
         android:title="@string/filter"
         android:icon="@drawable/ic_filter"
-        app:showAsAction="always"/>-->
+        app:showAsAction="always"/>
 </menu>

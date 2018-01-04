@@ -15,12 +15,30 @@ import kotlinx.android.synthetic.main.item_crypto_currency.view.*
 /**
  * Created by Riad on 02-Dec-17.
  */
-class CryptoCurrenciesAdapter(private val mComparator: Comparator<CryptoCurrency>):
+class CryptoCurrenciesAdapter(private var mComparator: Comparator<CryptoCurrency>):
         RecyclerView.Adapter<CryptoCurrenciesAdapter.CryptoViewHolder>() {
 
     private val currencySortedList: SortedList<CryptoCurrency>
     init {
         currencySortedList = SortedList(CryptoCurrency::class.java, object : SortedListAdapterCallback<CryptoCurrency>(this){
+            override fun onInserted(position: Int, count: Int) {
+//                notifyItemInserted(position)
+                notifyItemRangeInserted(position, count)
+            }
+
+            override fun onRemoved(position: Int, count: Int) {
+//                notifyItemRemoved(position)
+                notifyItemRangeRemoved(position, count)
+            }
+
+            override fun onMoved(fromPosition: Int, toPosition: Int) {
+                notifyItemMoved(fromPosition, toPosition)
+            }
+
+            override fun onChanged(position: Int, count: Int) {
+                notifyItemRangeChanged(position, count)
+//                notifyItemChanged(position)
+            }
 
             override fun areContentsTheSame(oldItem: CryptoCurrency?, newItem: CryptoCurrency?) = oldItem == newItem
 
